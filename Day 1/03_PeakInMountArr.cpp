@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+//852. Peak Index in a Mountain Array
+
 int peak(int arr[], int size)
 {
     int s = 0;
