@@ -23,7 +23,7 @@ int countPrimes(int n)
 }//Complexity : O(n*log(logn ))  --> n/2 + n/3 + n/5 ......
 
 
-//Sieve of Eratoas
+//Sieve of Eratosthanos
 int main()
 {
     int n;

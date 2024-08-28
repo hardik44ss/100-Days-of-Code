@@ -1,0 +1,39 @@
+Time complexity in increasing order 
+O(n)
+O(log.logn)
+O(logn)
+O(n^1/2)
+O(n)
+O(nlogn)
+O(n^2)
+O(n^3)
+O(n^K)
+O(2^n)
+O(2^2^n)
+
+<Time complexities of the algorithms :>
+
+Binary Search: O(log n)
+Sequential Search: O(n)
+Quick Sort: O(n log n)
+Merge Sort: O(n log n)
+Insertion Sort: O(n^2)
+Bubble Sort: O(n^2)
+Heap Sort: O(n log n)
+Selection Sort: O(n^2)
+Height of CBT: O(log n)
+Insertion in Heap: O(log n)
+Construct Heap: O(n log n)
+Delete from Heap: O(log n)
+Huffman: O(n log n)
+Prim's Matrix: O(n^2)
+Kruskal: O(E log E)
+DFS, BFS: O(V + E)
+All-pair Shortest: O(n^3)
+Dijkstra: O((V + E) log V)
+
+//Time complexity calculating 
+ -COunting operation
+ -Master theorem
+ -Recurrence tree relation
+ -Substitution method
