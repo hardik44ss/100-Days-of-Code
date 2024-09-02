@@ -1,104 +1,127 @@
     int first = 8;
     int second = 18;
     int *ptr = &second;
-    *ptr = 9;
-    cout  << first << " " << second << endl;    
+    *ptr = 9;  
+    cout  << first << " " << second << endl;  
+    //*ptr = second Value = 9 
+    # Ans. 8 9
+
 
     int first = 6;
     int *p = &first;
     int *q = p;
     (*q)++;
     cout << first  << endl;
+    *q = p = value of first =^+1
+    # Ans. 7
+
 
     int first = 8;
     int *p = &first;
-    cout << (*p)++ << " ";
-    cout << first << endl;
+    cout << (*p)++ << " ";  //8
+    cout << first << endl;  //9
 
-    int *p = 0;
+    int *p = 0;         //Null pointer
     int first = 110;
-    *p = first;
+    *p = first;         //Segmentation falut
     cout << *p << endl;
 
     int first = 8;
     int second = 11;
-    int *third = &second; 
-    first = *third;
-    *third = *third + 2;
+    int *third = &second;  
+    first = *third;             //first = 11
+    *third = *third + 2;        //second = 13
     cout  << first << "  " << second << endl;
 
-    float f = 12.5;
+    float f = 12.5; 
     float p = 21.5;
     float* ptr = &f;
-    (*ptr)++;
-    *ptr = p;
+    (*ptr)++;           //13.5
+    *ptr = p;           //21.5
     cout << *ptr << " " << f << " " << p << endl;
     
 
     int arr[5];
     int *ptr;
     cout << sizeof(arr) << " " << sizeof(ptr) << endl;
+            # //5*4=20              // 8 for 64 bit
+
 
     int arr[] = {11, 21, 13, 14};
     cout << *(arr) << " " << *(arr+1) << endl;
+            # //11             //value_of(arr[0+1])
+
+
 
     int arr[6] = {11, 12, 31};
     cout << arr << " " << &arr << endl;
+    # //arr=&arr=&arr[0]
+
 
     int arr[6] = {11, 21, 13};
     cout << (arr + 1) << endl;
+    # //Addressss of arr[0+1]
+
 
     int arr[6] = {11, 21, 31};
     int *p = arr;
     cout << p[2] << endl;
+    # //*(p+2)
+
 
     int arr[] = {11, 12, 13, 14, 15};
     cout << *(arr) << " " << *(arr + 3);
+    # //11 14
+
 
     int arr[] = {11, 21, 31, 41};
     int *ptr = arr++;
     cout << *ptr << endl;
+    # Updation in array not allowed when pointer present
 
      char ch = 'a';
     char* ptr = &ch;
     ch++;
     cout << *ptr << endl;
-
+#   b
 
     char arr[] = "abcde";
     char *p = &arr[0];
     cout << p << endl;
+#   abcde
 
     char arr[] = "abcde";
     char *p = &arr[0];
     p++;
     cout << p << endl;   
+#    bcde
 
     char str[]= "babbar";
     char *p = str;
     cout << str[0] << " " << p[0] << endl;
+#    b b
 
 
     void update(int *p){
         *p = (*p)  *  2;
     }
-
     int main(){
         int i = 10;
         update(&i);
         cout << i << endl;
     }
+#    20
 
 
     void fun(int arr[]) {
         cout << arr[0] << " ";
     }
-
     int main() {
         int arr[] = {11, 12, 13, 14};
         fun(arr + 1);
         cout << arr[0] << endl;
     }
+#    11
 
 
 
@@ -107,12 +130,12 @@
         p = &a;
         *p = (*p) * (*p);
     }
-
     int main(){
         int a = 70;
         square(&a);
         cout << a << endl;
     }
+#   4900
 
 
     int first = 10;
@@ -122,34 +145,35 @@
     *q = &second;
     (*p)++;
     cout << first << " " << second << endl;
-
+# 
+-------------Double_Pointers----------------------
     int first = 110;
     int *p = &first;
     int **q = &p;
     int second = (**q)++ + 9;
     cout << first << " " << second << endl; 
+#   111    119
 
 
     int first = 100;
     int *p = &first;
     int **q = &p;
-    int second = ++(**q);
+    int second = ++(**q);   //101
     int *r = *q;
-    ++(*r);
+    ++(*r);   
     cout << first << " " << second << endl; 
+#   102   101
 
     void increment(int **p){
         ++(**p);
     }
-
     int main(){
         int num = 110;
         int *ptr = &num;
         increment(&ptr);
         cout << num << endl;
     }  
-
-
+#   111
 
     int main()
     {
@@ -158,6 +182,7 @@
     cout << *arr + 8;
     return 0;
     }
+# 
 
 
     int main()
@@ -169,6 +194,7 @@
         cout << p;
         return 0;
     }
+# 
 
 
     int main()
@@ -182,6 +208,7 @@
         cout << arr;
         return 0;
     }
+# 
 
     int main()
     {
@@ -192,6 +219,7 @@
         cout<< ptr2 - ptr1;
         return 0;
     }
+# 
 
 
     int main() {
@@ -201,12 +229,14 @@
         }
         return 0;
     }
+# 
 
     void Q(int z)
     {
         z += z;
         cout<<z << " ";
     }
+# 
 
     void P(int *y) 
     {
@@ -215,6 +245,7 @@
         *y = x - 1; 
         cout<<x << " ";
     }
+# 
 
     int main()
     {
@@ -223,6 +254,7 @@
         cout<<x;
         return 0;
     }
+# 
 
 
     int main()
@@ -236,6 +268,7 @@
         cout<<*p << " " <<**q << " "<<***r;
         return 0;
     }
+# 
 
 
     int f(int x, int *py, int **ppz) {
@@ -246,7 +279,8 @@
         y = *py;
         x += 3;
         return x + y + z;
-    }
+    # }
+
 
     int main() {
         int c, *b, **a;
@@ -255,4 +289,4 @@
         a = &b;
         cout << f(c, b, a);
         return 0;
-    }
+    # }
