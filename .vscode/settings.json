@@ -4,5 +4,6 @@
         "ostream": "cpp"
     },
     "pieces.cloudCapabilities": "Blended",
-    "pieces.telemetry": true
+    "pieces.telemetry": true,
+    "java.debug.settings.onBuildFailureProceed": true
 }
