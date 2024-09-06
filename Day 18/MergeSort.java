@@ -62,8 +62,6 @@ public class MergeSort {
             arr[mainIndex++] = arr2[j++];
         }
 
-        
-
     }
 
 }
