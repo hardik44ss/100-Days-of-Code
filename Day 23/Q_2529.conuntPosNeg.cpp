@@ -44,7 +44,3 @@ int main() {
     cout << "Maximum count: " << maximumCount(nums) << endl;
     return 0;
 }
-/*
-CodeForces Questions: 
-    A. Minimize!
-    A.Alternative Sum*/
