@@ -1,9 +1,13 @@
 #include<iostream>
 using namespace std;
 
-int main() {
-    int t;
-    cin >> t;
+//Fibbonacci series
+int fib(int n){
+    if(n==1 || n==0){
+        return n;
+    }
+    return fib(n-1) + fib(n-2);
+}
 
 int main () 
 {
@@ -34,5 +38,4 @@ fibonacci(1) fibonacci(0)                                :2^4
 Space : n*O(1) + O(1)
 Space complexity : O(n)
 */
-   
    
