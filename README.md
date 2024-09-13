@@ -1,17 +1,17 @@
 # 💯 100 Days of Code Challenge 🚀
 
-Welcome to my **100 Days of Code** journey! I began this exciting challenge on **August 20, 2024**, with a commitment to improve my problem-solving and coding skills daily. I am following **Love Babbar's DSA series** and practicing on platforms like **LeetCode** and **CodeForces**.
+Welcome to my **100 Days of Code** journey! I started this challenge on **August 20, 2024**, and have been working hard to improve my problem-solving skills and deepen my understanding of Data Structures and Algorithms. With a mix of learning from **Love Babbar's DSA series** and practicing on platforms like **LeetCode** and **Codeforces**, I'm building my coding skills every day.
 
 ![Coding](https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif)
 
 ## 🌟 About the Challenge
 
-The goal is to consistently code for 100 days, working on:
-- Data Structures and Algorithms (DSA) 🌲
-- Problem-solving 🧠
-- Competitive programming 💡
+The goal is to code consistently for 100 days, focusing on:
+- Data Structures and Algorithms (DSA) 🌳
+- Problem-solving skills 🧠
+- Competitive programming 💥
 
-I'm actively solving problems on **LeetCode**, **CodeForces**, and focusing on building a solid foundation with **C++**.
+I have solved **60+ problems on LeetCode** and recently started practicing problems on **Codeforces** (since **10th September 2024**). Although I haven't participated in contests yet, I am steadily preparing for it!
 
 ## 📆 Challenge Start Date
 - **August 20, 2024**
@@ -20,11 +20,11 @@ I'm actively solving problems on **LeetCode**, **CodeForces**, and focusing on b
 
 | Day | Topics Covered                                                                                                    | Platforms         |
 |-----|-------------------------------------------------------------------------------------------------------------------|-------------------|
-| 1   | Started with Arrays, solved problems on **LeetCode**                                                              | LeetCode          |
-| 2   | Linked Lists deep dive, solved basic problems on **LeetCode**                                                     | LeetCode          |
-| 3   | Stack and Queue concepts, explored STL libraries                                                                 | LeetCode, CodeForces |
-| 4   | Revised STL, Arrays, and more, solved problems on **LeetCode**                                                    | LeetCode          |
-| 5   | Practiced sorting algorithms, solved **Codeforces** problem                                                       | CodeForces        |
+| 1   | Started with binary search , first and Last occurance                                                             | Love Babbar       |
+| 2   | Understanding Rotated array and finding square root .                                                             | Love Babbar       |
+| 3   | Learned about Selection , Insertion and Bubble Sort                                                               | Love Babbar       |
+| 4   | Solved different problems on **LeetCode**                                                                         | LeetCode          |
+| 22  | Started solving **Codeforces** problem sets                                                                       | Codeforces        |
 | ... | More exciting updates coming!                                                                                     |                   |
 
 Check the full progress in the [daily log](./logs/daily-log.md) 📜
@@ -37,41 +37,38 @@ Check the full progress in the [daily log](./logs/daily-log.md) 📜
 
 ## 🎯 Goals for the Challenge
 
-- Master Data Structures and Algorithms.
-- Solve over 200+ problems on LeetCode.
-- Participate in **CodeForces** contests regularly.
-- Build strong coding fundamentals in **C++**.
-- Learn to solve problems efficiently with time and space complexity in mind.
+- Solve **200+ problems** on LeetCode.
+- Regularly solve **Codeforces** problem sets.
+- Participate in **Codeforces contests** once I feel confident.
+- Master fundamental algorithms and data structures using **C++**.
 
 ## 🔥 Motivation
 
-Coding every day has been challenging but also rewarding! By pushing myself through daily coding practice, I'm gaining confidence in tackling difficult problems and enhancing my competitive programming skills.
+Each day of this challenge pushes me to grow as a coder, and I'm determined to reach my goals! Coding daily is tough, but with consistent effort, I know I’ll be ready for contests and complex problem-solving.
 
 ![Motivation](https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif)
 
-## 🌈 What's Next?
-
-As I move forward in this journey, my upcoming goals include:
-
-- 🔍 Focusing more on dynamic programming and graph algorithms.
-- 🏆 Participating in more **CodeForces** contests.
-- 🌟 Collaborating with other developers in the coding community.
-
 ## 📈 Repository Overview
 
-This repository tracks my daily progress in the **100 Days of Code** challenge. Each day, I'll be updating this repository with:
-- 📝 Daily progress logs.
-- 📁 Solutions to problems.
-- ⚡ Reflections and notes on learning.
+This repository is where I track my **100 Days of Code** progress. It includes:
+- 📝 Daily logs of my coding journey.
+- 📁 Solutions to LeetCode and Codeforces problems.
+- 🧠 Insights and reflections on new concepts I’m learning.
+
+## 🌈 What's Next?
+
+- Continue solving more **LeetCode** and **Codeforces** problems.
+- Focus on dynamic programming and graph algorithms.
+- 🏆 Getting ready for my first **Codeforces contest** after more practice.
 
 ## 📧 Contact
 
-If you're interested in discussing anything related to coding, learning, or collaborating, feel free to reach out to me:
+Feel free to connect with me or follow my journey:
 - **LinkedIn**: [Hardik Suthar](https://www.linkedin.com/in/hardik44ss)
 - **GitHub**: [hardik44ss](https://github.com/hardik44ss)
 
 ---
 
-Stay tuned for more updates and feel free to fork or star the repository ⭐ to follow my journey!
+⭐ If you're following a similar journey, star this repository and let's grow together!
 
 ![Keep Coding](https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif)
