@@ -1,0 +1,44 @@
+The main intention of c++ is to add obeject oriented programming to c language
+An object-oriented programming language uses objects in its programming . It  aims to emulate 
+real-world concepts such as inheritance, polymorphism, abstraction, etc, in a program. 
+
+**POP-->Procedure Oriented programing
+// Main program
+[func1]  .  [func2]  .  [func3] 
+call function as needed
+**OOP-->object oriented
+works on the concept of classes and objects
+A class is a template to create objects = cluster of ob jects
+Treats data as a critical element
+(i.e.)
+Class = Animals // Basic template for creating objects
+    objects=dog,cat,horse// Basic run time entities
+*DAta abstraction = layers of processes,
+Encapsulation=wrapping into single unit. Adding two entites
+*inheritance = Similarities between others 
+*polymorphism = ability  to make more than one forms //alg alg roop 
+*Dynamic Binding:code which will execute in not known until program runs
+*Message passing : Object.Message(information) call formate
+
+********Benifits*******
+=BEtter Code reuseability using objects and inheritance
+=priniple of data hiding 
+=Multiple objets coexist without any interference
+=software complexity can be easily managed
+
+/*OOps - Classes and objects
+    c++ --> intialy called -> C with classes by stroustroup
+    class -->exxtension of structures
+    structure limitation
+           -->member are public
+           -->No methods
+    classes = structures + more
+    (can have methods and properties)
+    classes can make few members as private and few as public
+    structures== are typedef
+    we can declare object along with class declaration      
+    class student{
+        //class_defination
+    }hardik,sumit,mohit;// example
+*/ 
+
