@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "unordered_map": "cpp"
     },
     "pieces.cloudCapabilities": "Blended",
     "pieces.telemetry": true,
