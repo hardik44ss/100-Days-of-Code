@@ -47,7 +47,7 @@ int main ()
         cout<<s<<" , Reduntant : " <<"No"<<endl;
     }
 
-    string str = "(a+(b-c)";
+    string str = "(a+(b-c))";
     if(findRedundantBrackets(str)) {
         cout<<str<<" , Reduntant: "<<"Yes"<<endl;
     }
