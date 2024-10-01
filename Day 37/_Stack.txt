@@ -1,0 +1,51 @@
+" Stack: Linear Data Structure that follows LIFO (Last In First Out) principle."
+
+## **Definition**: 
+A stack is a linear data structure that follows the LIFO (Last In First Out) principle, where the last element added is the first one to be removed.
+
+## **Basic Operations**:
+- **Push**: Adding an element to the top of the stack.
+- **Pop**: Removing the topmost element from the stack.
+- **Peek/Top**: Retrieving the topmost element without removing it.
+
+## **Applications**:
+- **Expression Evaluation**: Used for evaluating expressions like postfix or prefix.
+- **Function Call Management**: Used in recursion to keep track of function calls.
+- **Undo/Redo Functionality**: In text editors to keep track of changes.
+- **Depth-First Search (DFS)**: Used in graph traversal algorithms.
+
+## **Types of Stacks**:
+- **Simple Stack**: Basic LIFO stack.
+- **Dynamic Stack**: Resizes dynamically when full (usually implemented with dynamic arrays or linked lists).
+- **Double Stack**: Two stacks sharing the same memory block, often used to optimize memory.
+
+## **Implementation**:
+- **Array-Based**: Fixed size, efficient but can lead to overflow if the stack size limit is reached.
+- **Linked List-Based**: Dynamic size, no overflow but requires extra memory for pointers.
+
+## **Complexity**:
+- **Push**: O(1) for both array and linked list implementations.
+- **Pop**: O(1) for both array and linked list implementations.
+- **Peek/Top**: O(1) to access the topmost element.
+
+## **Real-World Examples**:
+- **Browser Back Button**: Stack of previously visited pages.
+- **Undo/Redo**: Keeping track of changes in applications.
+- **Balancing Parentheses**: Checking for balanced parentheses in code.
+
+## **Advantages**:
+- **Simple Operation**: Push and pop operations are straightforward and efficient.
+- **Efficient Access**: Accessing the top element is O(1).
+- **Dynamic Size (Linked List-Based)**: No need to worry about size limitations in the dynamic stack.
+
+## **Disadvantages**:
+- **Limited Access**: Only the top element can be accessed directly.
+- **Fixed Size (Array-Based)**: Risk of overflow in a statically sized array-based stack.
+- **Memory Overhead (Linked List-Based)**: Additional memory is required to store pointers.
+
+## **Common Interview Questions**:
+- Implement a stack using queues.
+- Check for balanced parentheses using a stack.
+- Reverse a string using a stack.
+- Explain how a stack is used in recursion management.
+- Design a stack that supports push, pop, and retrieving the minimum element in constant time.

@@ -1,0 +1,47 @@
+" # Queue : Linear Data Structure that follows FIFO (First In First Out) principle."
+
+## **Definition**: 
+A queue is a linear data structure that follows the FIFO (First In First Out) principle, where the first element added is the first one to be removed.
+
+## **Basic Operations**:
+- **Enqueue**: Adding an element to the rear of the queue.
+- **Dequeue**: Removing an element from the front of the queue.
+
+## **Applications**:
+- **Scheduling**: Task scheduling in operating systems.
+- **Buffering**: Data buffering in IO operations.
+- **Breadth-First Search (BFS)**: Used in graph traversal algorithms.
+
+## **Types of Queues**:
+- **Simple Queue**: Basic FIFO queue.
+- **Circular Queue**: The last position is connected back to the first position to make a circle.
+- **Priority Queue**: Elements are dequeued based on priority rather than order.
+- **Deque (Double-Ended Queue)**: Insertion and deletion can occur at both ends.
+
+## **Implementation**:
+- **Array-Based**: Fixed size, straightforward but can lead to overflow.
+- **Linked List-Based**: Dynamic size, more flexible but requires extra memory for pointers.
+
+## **Complexity**:
+- **Enqueue**: O(1) for both array and linked list implementations.
+- **Dequeue**: O(1) for both array and linked list implementations.
+- **Peek/Front**: O(1) to access the front element.
+
+## **Real-World Examples**:
+- **Print Queue**: Managing print jobs in a printer.
+- **Customer Service**: Handling customer requests in the order they arrive.
+
+## **Advantages**:
+- **Order Maintenance**: Maintains the order of elements.
+- **Simplicity**: Simple to implement and use.
+
+## **Disadvantages**:
+- **Fixed Size (Array-Based)**: Limited by the initial size of the array.
+- **Memory Overhead (Linked List-Based)**: Extra memory required for pointers.
+
+## **Common Interview Questions**:
+- Implement a queue using stacks.
+- Design a circular queue.
+- Explain the difference between a queue and a stack.
+- Discuss the use of queues in BFS and other algorithms.
+
