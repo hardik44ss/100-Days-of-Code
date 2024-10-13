@@ -1,0 +1,16 @@
+Building tree using Level order 
+Printing tree in level order
+Printing tree using Reverse level order
+
+Preorder traversal of binary tree 
+Inorder traversal of binary tree
+Postorder traversal of binary tree
+
+Iterative Preorder traversal of binary tree
+Iterative Inorder traversal of binary tree
+Iterative Postorder traversal of binary tree
+
+Height of tree
+Diameter of tree
+Mirror of tree
+
