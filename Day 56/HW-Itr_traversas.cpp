@@ -110,7 +110,25 @@ int main()
     root = buildTree(root);
     // Input : 1 3 7 -1 -1 10 -1 -1 5 11 -1 -1 -1
 
-    reversePrint(root);
+    cout << "Preorder Traversal: ";
+    preOrderIterative(root);
+    cout << endl;
+
+    cout << "Postorder Traversal: ";
+    vector<int> postOrderResult = postOrder(root);
+    for (int val : postOrderResult)
+    {
+        cout << val << " ";
+    }
+    cout << endl;
+
+    cout << "Inorder Traversal: ";
+    vector<int> inOrderResult = inOrder(root);
+    for (int val : inOrderResult)
+    {
+        cout << val << " ";
+    }
+    cout << endl;
 
     return 0;
 }
