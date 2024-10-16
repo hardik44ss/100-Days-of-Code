@@ -28,48 +28,33 @@ Node *buildTree(Node *root)
     return root;
 }
 
-void traverseLeft(Node* root , vector<int> &ans){
-        if(!root|| (!root->left && !root->right)) return;
-            
-        ans.push_back(root->data);
-        
-        if(root->left) traverseLeft(root->left ,ans);
-        else traverseLeft(root->right ,ans);
+vector<int> zigZag(Node* root){
+    vector<int> result;
+    if(!root) return result;
+    queue<Node*> q;
+    q.push(root);
+
+    bool leftToRight=true;
+    while(!q.empty()){
+        int size = q.size();
+        vector<int> levelElements(size);
+
+        for(int i = 0 ; i <size; i++){
+            Node* frontNode = q.front();
+            q.pop();
+
+            int index = leftToRight ? i : size-i-1;
+            levelElements[index] = frontNode->data;
+
+            if(frontNode->left) q.push(frontNode->left);
+            if(frontNode->right) q.push(frontNode->right);
+        }
+
+        leftToRight = !leftToRight;
+        for(auto i : levelElements) result.push_back(i);
     }
-    
-    void traverseLeaf(Node* root , vector<int> &ans){
-        if(!root) return;
-        
-        if(!root->left  && !root->right) ans.push_back(root->data);
-        
-        traverseLeaf(root->left, ans);
-        traverseLeaf(root->right, ans);
-    }
-    
-    void traverseRight(Node* root , vector<int> &ans){
-        if(!root || (!root->left && !root->right)) return;
-            
-        if(root->right) traverseRight(root->right ,ans);
-        else traverseRight(root->left ,ans);
-        
-        ans.push_back(root->data);
-    }
-    
-    vector <int> boundary(Node *root)
-    {
-        vector<int> ans;
-        if(!root) return ans;
-        
-        ans.push_back(root->data);
-        traverseLeft(root->left,ans); 
-        
-        traverseLeaf(root->left,ans);
-        traverseLeaf(root->right,ans);
-        
-        traverseRight(root->right,ans); 
-        
-        return ans;
-    }
+    return result;
+}
 
 int main () 
 {
@@ -84,11 +69,11 @@ int main ()
 //       / \
 //      8   9
 // Input: 1 2 4 -1 -1 5 8 -1 -1 9 -1 -1 3 6 -1 -1 7 -1 -1
-// Output: 1 2 4 8 9 6 7 3
+// Output: 1 3 2 4 5 6 7 9 8
 
-    vector<int> boundaryTraversal = boundary(root);
+    vector<int> boundaryTraversal = zigZag(root);
 
-    cout << "Boundary Traversal : ";
+    cout << "Spiral Traversal : ";
     for (int i : boundaryTraversal) {
         cout << i << " ";
     }
