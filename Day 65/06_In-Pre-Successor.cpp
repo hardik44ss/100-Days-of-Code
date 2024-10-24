@@ -47,7 +47,7 @@ int main() {
     cout << endl << "Level Order Traversal : " << endl;
     levelOrderTraversal(root);
 
-    int index = 0;
+    // int index = 0;
     pair<int, int> ans = predecessorSuccessor(root, key);
 
     cout << "Predecessor : " << ans.first << endl;
