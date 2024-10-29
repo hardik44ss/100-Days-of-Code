@@ -3,7 +3,13 @@
     "iostream": "cpp",
     "ostream": "cpp",
     "unordered_map": "cpp",
-    "iosfwd": "cpp"
+    "iosfwd": "cpp",
+    "array": "cpp",
+    "bitset": "cpp",
+    "initializer_list": "cpp",
+    "regex": "cpp",
+    "utility": "cpp",
+    "valarray": "cpp"
   },
   "pieces.cloudCapabilities": "Blended",
   "pieces.telemetry": true,

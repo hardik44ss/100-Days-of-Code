@@ -1,0 +1,70 @@
+---------------------------------::  Heaps in C++  ::-------------------------------------/
+
+Heaps are tree-based data structures that satisfy specific ordering properties and are often implemented as binary trees.
+
+**Properties of Heaps:**
+
+1. **Complete Binary Tree Structure**: A heap is a complete binary tree, meaning all levels are fully filled except possibly the last level, which is filled from left to right. This ensures efficient memory usage and easy navigation.
+
+2. **Heap Property**:
+   - In a **Max-Heap**, each parent node has a value greater than or equal to its children, with the maximum element at the root.
+   - In a **Min-Heap**, each parent node has a value less than or equal to its children, with the minimum element at the root.
+
+3. **Insertion and Deletion**:
+   - **Insertion**: When a new element is inserted, it is initially placed at the end of the tree. Then, the heap is adjusted by comparing it with parent nodes and swapping values to ensure the heap property is maintained.
+   - **Deletion (Extract-Max or Extract-Min)**: In heaps, deletion is commonly done at the root (the max element in a max-heap or the min element in a min-heap). After removing the root, the last element is moved to the root, and the heap is adjusted (heapified) to maintain the heap property.
+
+4. **Heapify**: Heapify is the process of adjusting the elements of a heap to maintain the heap property. It is used after insertions, deletions, and during heap construction to ensure the structure remains valid as a max-heap or min-heap.
+
+---
+
+**Common Interview Questions with Answers:**
+
+1. **What is the time complexity of inserting an element in a heap?**
+   - The time complexity of insertion in a heap is **O(log n)** because the inserted element may need to move up to maintain the heap property, which can take at most the height of the heap (logarithmic due to its binary tree structure).
+
+2. **Explain the difference between a Min-Heap and a Max-Heap.**
+   - In a **Min-Heap**, the smallest element is at the root, and each parent node is smaller than or equal to its children. In a **Max-Heap**, the largest element is at the root, and each parent node is larger than or equal to its children.
+
+3. **What is the primary use of heaps?**
+   - Heaps are primarily used to implement **priority queues**, where the highest (or lowest) priority element needs to be accessed quickly. They are also useful in graph algorithms, like Dijkstra’s algorithm, and in sorting algorithms, like Heap Sort.
+
+4. **How do you delete the maximum (or minimum) element in a heap?**
+   - To delete the max (in a max-heap) or min (in a min-heap), remove the root element, replace it with the last element in the heap, and then heapify. This process takes **O(log n)** time due to the restructuring required.
+
+5. **What is Heapify, and when is it used?**
+   - Heapify is the process of rearranging elements to maintain the heap property. It is used when building a heap, inserting an element, or deleting the root element. The time complexity of heapifying a single element is **O(log n)**.
+
+6. **Why are heaps useful in implementing priority queues?**
+   - Heaps allow for efficient access to the highest or lowest priority element. The maximum or minimum element is always at the root, making retrieval **O(1)**. Insertions and deletions, which may involve rearranging elements to maintain the heap property, take **O(log n)** time.
+
+7. **How is a heap represented in an array?**
+   - A heap can be efficiently represented in an array. For any node at index `i`:
+     - The left child is at index `2 * i + 1`.
+     - The right child is at index `2 * i + 2`.
+     - The parent is at index `(i - 1) / 2` (integer division).
+
+8. **What is the time complexity of building a heap from an array of n elements?**
+   - Building a heap from an unsorted array of `n` elements has a time complexity of **O(n)**. This is achieved using the "heapify" operation starting from the last non-leaf node up to the root.
+
+9. **How does Heap Sort work, and what is its time complexity?**
+   - Heap Sort is a comparison-based sorting technique that builds a max-heap or min-heap from the input data. It repeatedly removes the root (max or min) and places it at the end of the array. The time complexity of Heap Sort is **O(n log n)**, as building the heap takes **O(n)** and each removal takes **O(log n)** over `n` elements.
+
+10. **Can you implement a priority queue with a Min-Heap or Max-Heap?**
+   - Yes, a priority queue can be implemented using a heap. A Min-Heap gives priority to the smallest element, while a Max-Heap prioritizes the largest. This choice depends on whether you want the highest or lowest element to have priority.
+
+---
+
+** STL representation of Heaps in C++:**
+
+---
+We use priority queue for representation of heaps in C++.
+#include<queue> //We need to include this header file for using priority queue.
+
+1. **Max-Heap:**:
+        priority_queue<int> maxHeap;
+
+2. **Min-Heap**:
+        priority_queue<int, vector<int>, greater<int>> minHeap;
+
+---
