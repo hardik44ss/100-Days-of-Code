@@ -1,0 +1,58 @@
+----------------------HASHMAP----------------------
+### HashMap - Concepts and Interview Guide
+
+1. **What is a HashMap?**
+   - A **HashMap** is a data structure that implements an associative array, storing data in key-value pairs. It allows for efficient data retrieval using a unique key, without needing to traverse the entire data structure.
+   - In most languages (e.g., Java, C++ unordered_map), a HashMap is backed by an array and uses hashing to map keys to specific indices in the array.
+
+2. **Why Use a HashMap?**
+   - **Efficiency**: HashMaps provide **O(1)** average-time complexity for insertions, deletions, and lookups.
+   - **Unordered Storage**: Unlike arrays or lists, data is stored without order, optimizing space and time when data ordering is not essential.
+   - **Flexible Key Types**: HashMaps allow various types as keys, including primitive types (int, char) or complex objects (String, custom classes).
+   - **Frequent Applications**: Commonly used in caching, storing frequency of elements, associative storage, and fast data retrieval.
+
+3. **Where is HashMap Used?**
+   - **Counting Frequencies**: Used in algorithms to track occurrences of elements, e.g., counting characters in a string.
+   - **Caching and Lookup Tables**: Stores precomputed values for faster retrieval in applications (e.g., LRU cache implementation).
+   - **Database Indexing**: HashMap data structures are used in databases to index data for efficient access.
+   - **Dynamic Programming**: Used in memoization to store results of sub-problems to avoid redundant computations.
+
+4. **Time Complexities of HashMap Operations**
+   - **Insertion**: Average case **O(1)**, worst-case **O(n)** (if many collisions occur).
+   - **Deletion**: Average case **O(1)**, worst-case **O(n)**.
+   - **Search/Lookup**: Average case **O(1)**, worst-case **O(n)**.
+   - **Space Complexity**: **O(n)** where `n` is the number of entries in the HashMap.
+
+5. **Interview Questions on HashMap**
+
+   - **Basic Questions:**
+     1. **What are the core methods in a HashMap?**
+        - Common methods include `put(key, value)`, `get(key)`, `remove(key)`, `containsKey(key)`, and `size()`.
+
+     2. **How does a HashMap handle collisions?**
+        - Typically, it uses separate chaining (linked lists or trees) or open addressing (like linear probing) to resolve key collisions.
+
+     3. **What is hashing?**
+        - Hashing is a technique to uniquely map data to fixed-size values (hash codes) used for efficient data retrieval.
+
+   - **Intermediate Questions:**
+     1. **Explain the load factor in a HashMap.**
+        - The load factor determines when the HashMap will be resized. A load factor of 0.75 (common default) means the HashMap will resize when it is 75% full.
+
+     2. **Why is a good hash function important?**
+        - A good hash function minimizes collisions, distributing keys uniformly across the array and optimizing performance.
+
+     3. **How do HashMap and TreeMap differ?**
+        - HashMap provides unordered, constant-time operations, while TreeMap sorts entries by keys and has `O(log n)` time complexity.
+
+   - **Advanced Questions:**
+     1. **What is the time complexity for a HashMap with rehashing?**
+        - Rehashing takes **O(n)** time as all elements are reinserted into a new, larger array. The amortized complexity remains **O(1)** for individual insertions.
+
+     2. **How can you implement a custom HashMap?**
+        - Implement a hash function, handle collisions (chaining or open addressing), and manage resizing (rehashing) with load factor checks.
+
+     3. **Describe scenarios where HashMaps are inefficient.**
+        - HashMaps are inefficient for ordered data, real-time access with frequent resizing, or data with highly similar hash codes causing many collisions.
+
+---
