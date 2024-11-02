@@ -51,7 +51,7 @@ int smallestRange(vector<vector<int> > kArrays, int K, int N) {
         }
 
         // checking whether next element exists or not
-        if(temp->col < N) {
+        if(temp->col+1 < N) {
             maxi = max(maxi, kArrays[temp->row][temp->col + 1]);
             minHeap.push(new Node(kArrays[temp->row][temp->col + 1], temp->row, temp->col + 1));
         } else {
