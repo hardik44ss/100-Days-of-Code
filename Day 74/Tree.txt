@@ -1,0 +1,85 @@
+**Tree Data Structure**
+
+**Overview**
+- A **Tree** is a hierarchical data structure consisting of nodes connected by edges. It starts with a single root node and branches out into sub-nodes, forming a tree-like structure.
+- Trees are non-linear, unlike arrays, stacks, and queues, which are linear data structures. Each node in a tree can have multiple child nodes, but only one parent node.
+- Trees are used in various applications like file systems, databases, network routing, and hierarchical data representation.
+
+**Key Characteristics of a Tree**
+- **Root**: The topmost node of the tree.
+- **Parent**: A node that has children.
+- **Child**: A node that descends from another node.
+- **Leaf**: A node with no children.
+- **Depth**: The level of a node in the tree, where the root has a depth of 0.
+- **Height**: The number of edges in the longest path from a node to a leaf.
+- **Subtree**: A tree formed by a node and its descendants.
+
+**Common Interview Questions**
+
+1. **What is a Tree? How is it different from a Graph?**
+   - **Answer**: A Tree is a hierarchical structure with nodes connected by edges. It has a root and no cycles, meaning each node has only one path to any other node. In contrast, a graph can have cycles, multiple paths between nodes, and may or may not be hierarchical. Trees are a subset of graphs.
+
+2. **What are some real-world applications of trees?**
+   - **Answer**:
+     - File system structures.
+     - Organization structures (hierarchies).
+     - Database indexing (B-Trees, AVL Trees).
+     - XML and JSON data parsing.
+     - Network routing protocols (spanning trees).
+
+3. **Explain different types of trees.**
+   - **Answer**:
+     - **General Tree**: Nodes can have any number of children.
+     - **Binary Tree**: Each node has at most two children.
+     - **Binary Search Tree (BST)**: A binary tree with ordered nodes.
+     - **Balanced Trees (AVL, Red-Black)**: Trees that self-balance to ensure efficiency.
+     - **B-Trees**: Multi-level index trees used in databases.
+     - **Trie**: A tree used for storing words for quick search.
+
+4. **How do you traverse a tree? Explain different traversal methods.**
+   - **Answer**:
+     - **Preorder (Root-Left-Right)**: Visit the root, then recursively visit each child in preorder.
+     - **Inorder (Left-Root-Right)**: Common for binary trees, especially BSTs.
+     - **Postorder (Left-Right-Root)**: Visit all children before the node itself.
+     - **Level Order (Breadth-First)**: Visit nodes level by level.
+
+5. **What is the difference between Depth-First Search (DFS) and Breadth-First Search (BFS) in trees?**
+   - **Answer**: 
+     - **DFS** explores as far as possible along a branch before backtracking. It's usually implemented with recursion or a stack.
+     - **BFS** visits nodes level by level from the root, using a queue to track nodes at each level. BFS is used for shortest path finding in unweighted trees.
+
+6. **What is a balanced tree, and why is it important?**
+   - **Answer**: A balanced tree has a structure where the height difference between the left and right subtrees of any node is minimal, often by keeping the height \(O(\log n)\). This ensures efficient operations like insertion, deletion, and search, which all can be done in logarithmic time.
+
+7. **Explain the time complexity of operations on trees.**
+   - **Answer**:
+     - For **balanced trees**: search, insert, and delete operations generally take \(O(\log n)\).
+     - For **unbalanced trees**: search, insert, and delete can degrade to \(O(n)\) in the worst case.
+     - Traversals take \(O(n)\) as every node is visited.
+
+8. **What is the diameter of a tree? How do you find it?**
+   - **Answer**: The diameter of a tree is the longest path between any two nodes. It can be found using two DFS traversals:
+     1. Pick an arbitrary node and find the farthest node from it using DFS.
+     2. From that farthest node, perform another DFS to find the maximum distance to any other node.
+     - This maximum distance is the diameter of the tree.
+
+9. **What is a rooted tree?**
+   - **Answer**: A rooted tree has a designated root node from which every other node descends. Rooted trees define clear parent-child relationships and are commonly used to represent hierarchical data structures.
+
+10. **How do you find the height of a tree?**
+    - **Answer**: The height of a tree is the longest path from the root to any leaf node. It can be calculated recursively by finding the maximum height of each subtree and adding one. For each node:
+      - \( \text{height} = 1 + \max(\text{height(left subtree)}, \text{height(right subtree)}) \).
+
+11. **How would you convert a tree to a binary tree?**
+    - **Answer**: To convert a general tree to a binary tree:
+      - Each node’s first child becomes its left child.
+      - Each node’s sibling becomes its right child.
+      - This method is known as the **Left-Child Right-Sibling (LCRS) representation**.
+
+12. **How do you count the number of leaf nodes in a tree?**
+    - **Answer**: Using recursion:
+      - Traverse each node in the tree.
+      - If a node has no children, increment the leaf count.
+      - Alternatively, a level-order or DFS traversal can be used, checking if each node has children.
+
+---
