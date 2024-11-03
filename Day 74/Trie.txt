@@ -1,0 +1,121 @@
+## Trie (Prefix Tree)
+
+### What is a Trie?
+- A Trie (pronounced as "try") is a tree-like data structure that stores strings efficiently.
+- Each node in a Trie represents a character of a string.
+- Tries are commonly used to handle problems involving prefix matching, auto-complete suggestions, and spell checkers.
+
+### Key Characteristics
+1. **Each node** represents a character of the string.
+2. **Path traversal** from the root to a specific node represents a prefix of some word(s).
+3. **End markers** are placed at the end of words to signify word completion.
+4. **Efficient retrieval**: Searching for strings in a Trie has a time complexity of \(O(m)\), where \(m\) is the length of the word.
+
+### Trie Operations
+1. **Insertion**:
+   - Add each character of the word to the Trie, creating nodes as needed.
+   - Mark the end of the word.
+   
+2. **Search**:
+   - Traverse through each character in the Trie and return `true` if the word is found.
+   
+3. **Prefix Search**:
+   - Similar to search but stops after checking the prefix.
+
+4. **Deletion**:
+   - Delete nodes recursively, ensuring we only delete nodes that are no longer needed by any other words.
+
+### Complexity
+- **Insertion/Search**: \(O(m)\), where \(m\) is the length of the word.
+- **Space Complexity**: \(O(m \times n)\), where \(n\) is the number of words, and \(m\) is the average length of the words.
+
+---
+
+## Important Interview Questions on Tries
+
+### 1. **How would you insert a word into a Trie?**
+   **Answer**: 
+   - Start at the root node.
+   - For each character in the word, check if there’s an existing child node for that character.
+   - If not, create a new node for that character.
+   - Move to the next node in the path until the word is completely inserted.
+   - Finally, mark the last node as the end of a word.
+
+---
+
+### 2. **How would you search for a word in a Trie?**
+   **Answer**:
+   - Start from the root node.
+   - For each character in the word, check if there’s a child node for that character.
+   - If any character node is missing, return `false` (word is not present).
+   - If all characters are found and the last character’s node is marked as the end of a word, return `true`.
+
+---
+
+### 3. **How do you implement autocomplete functionality using a Trie?**
+   **Answer**:
+   - Insert all dictionary words into a Trie.
+   - To get autocomplete suggestions, start from the root and navigate to the node representing the last character of the given prefix.
+   - From this node, perform a depth-first search (DFS) or breadth-first search (BFS) to retrieve all words that start with this prefix.
+
+---
+
+### 4. **How do you delete a word from a Trie?**
+   **Answer**:
+   - Search for the word in the Trie to confirm its existence.
+   - If found, traverse back from the end node, removing nodes that are no longer part of any other word.
+   - If a node has other children, stop deletion to avoid affecting other words.
+
+---
+
+### 5. **How would you count the number of words with a given prefix?**
+   **Answer**:
+   - Traverse the Trie until reaching the node that represents the last character of the prefix.
+   - Perform a DFS or BFS from this node, counting all nodes marked as word-end nodes.
+
+---
+
+### 6. **How would you check if a Trie contains any words starting with a given prefix?**
+   **Answer**:
+   - Traverse the Trie following the prefix characters.
+   - If you reach a node representing the last character of the prefix, return `true`.
+   - If traversal fails (i.e., any character in the prefix is missing), return `false`.
+
+---
+
+### 7. **Explain how Tries can be used for spell-checking or dictionary validation.**
+   **Answer**:
+   - Insert all dictionary words into a Trie.
+   - For each word to be validated, check if it exists in the Trie.
+   - If present, the word is valid; otherwise, it’s a misspelling or non-dictionary word.
+
+---
+
+### 8. **What are the advantages and disadvantages of using Tries over hash tables for storing a large dictionary?**
+   **Answer**:
+   - **Advantages**:
+     - Tries provide efficient prefix-based operations.
+     - Tries inherently support lexicographic ordering.
+   - **Disadvantages**:
+     - Tries consume more memory compared to hash tables.
+     - Hash tables offer \(O(1)\) average time complexity for lookups but lack efficient prefix-matching capabilities.
+
+---
+
+### 9. **How would you implement a `wordCount` function that returns the number of times a word has been inserted into the Trie?**
+   **Answer**:
+   - Alongside the end-of-word marker, maintain a count at each node where a word ends.
+   - During insertion, increment the count for each word.
+   - The `wordCount` function simply returns the count stored at the end node for the specified word.
+
+---
+
+### 10. **Describe the space complexity of a Trie and ways to optimize it.**
+   **Answer**:
+   - **Space Complexity**: \(O(m \times n)\), where \(n\) is the number of words, and \(m\) is the average length of the words.
+   - **Optimization Techniques**:
+     - Use a **compressed Trie** or **radix tree** to merge nodes with single children.
+     - Use **hash maps** at each level to reduce space for large alphabets, especially if characters are sparse.
+     - **Remove redundant nodes** during insertion and deletion when possible.
+
+---
