@@ -1,0 +1,119 @@
+
+## Graphs - Overview
+
+= *Graphs* are a non-linear data structure that consists of a finite set of vertices (or nodes) and edges. Graphs are widely used to model relationships in various fields like computer networks, social networks, transportation systems, and more. 
+
+# Key Concepts
+
+1. **Vertex (Node):** A fundamental part of the graph where each vertex is connected to other vertices through edges.
+2. **Edge:** The connection between two vertices in the graph.
+3. **Directed and Undirected Graphs:** In a directed graph, edges have a direction (from one vertex to another), whereas, in an undirected graph, edges do not have a direction.
+4. **Weighted and Unweighted Graphs:** In weighted graphs, each edge has a weight or cost associated with it, while in unweighted graphs, edges have no weight.
+5. **Adjacency Matrix & List:** Common ways to represent a graph in memory.
+
+---
+
+## Important Interview Questions with Answers
+
+# Question 1: What are the common ways to represent a graph?
+
+**Answer:**
+1. **Adjacency Matrix:** A 2D array where each cell at position `(i, j)` has a value indicating the presence (or absence) and weight of an edge between nodes `i` and `j`.
+2. **Adjacency List:** A list where each index represents a vertex, and each entry contains a list of all the vertices connected to it.
+3. **Edge List:** A list of edges where each edge is represented by a pair (for unweighted graphs) or a triple (for weighted graphs).
+
+---
+
+# Question 2: Explain Breadth-First Search (BFS) and Depth-First Search (DFS).
+
+**Answer:**
+- **Breadth-First Search (BFS):** BFS is a level-order traversal that visits nodes layer by layer. It uses a queue to track the nodes to be visited next. BFS is suitable for finding the shortest path in an unweighted graph.
+- **Depth-First Search (DFS):** DFS is a traversal that explores as far as possible along each branch before backtracking. It uses a stack (or recursion) and is useful for tasks like detecting cycles, topological sorting, and finding connected components.
+
+---
+
+# Question 3: How would you detect a cycle in a graph?
+
+**Answer:**
+1. **In a Directed Graph:** Use DFS and track visited nodes and the recursion stack. If a node is revisited within the current recursion stack, a cycle is present.
+2. **In an Undirected Graph:** Use DFS or BFS with a visited array. Track the parent of each node; if a visited node is found that is not the parent, a cycle is detected.
+
+---
+
+# Question 4: Explain Dijkstra’s Algorithm.
+
+**Answer:**
+Dijkstra’s Algorithm is used to find the shortest path between nodes in a graph with non-negative weights. Starting from the source node, the algorithm repeatedly selects the unvisited node with the smallest distance and calculates the tentative distance to its neighbors. It uses a priority queue to efficiently track the minimum distances.
+
+---
+
+# Question 5: What is a Minimum Spanning Tree (MST)?
+
+**Answer:**
+A Minimum Spanning Tree is a subset of edges that connects all vertices in a weighted, undirected graph without any cycles and with the minimum possible total edge weight. Algorithms to find an MST include:
+- **Kruskal’s Algorithm**: Sort all edges by weight and add edges in increasing order, avoiding cycles.
+- **Prim’s Algorithm**: Start with any vertex and repeatedly add the smallest edge that connects a new vertex to the growing MST.
+
+---
+
+# Question 6: How can you implement a graph traversal in C++?
+
+**Answer:** Below is an example of a BFS traversal in C++ for an adjacency list representation of an undirected graph.
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <queue>
+using namespace std;
+
+void bfs(int start, vector<vector<int>>& adj, vector<bool>& visited) {
+    queue<int> q;
+    q.push(start);
+    visited[start] = true;
+
+    while (!q.empty()) {
+        int node = q.front();
+        q.pop();
+        cout << node << " ";
+
+        for (int neighbor : adj[node]) {
+            if (!visited[neighbor]) {
+                visited[neighbor] = true;
+                q.push(neighbor);
+            }
+        }
+    }
+}
+```
+
+---
+
+# Question 7: How do you check if a graph is bipartite?
+
+**Answer:**
+A graph is bipartite if it can be colored with two colors such that no two adjacent nodes have the same color. This can be checked using BFS or DFS by trying to color the graph. If any neighboring node has the same color, the graph is not bipartite.
+
+---
+
+# Question 8: What is a Topological Sort, and when can it be applied?
+
+**Answer:**
+Topological Sort is an ordering of vertices in a directed acyclic graph (DAG) where for every directed edge `u -> v`, vertex `u` comes before `v` in the ordering. It can be implemented using DFS or Kahn’s Algorithm (BFS-based approach). It’s useful in scenarios like task scheduling, dependency resolution, etc.
+
+---
+
+# Question 9: Explain Floyd-Warshall Algorithm.
+
+**Answer:**
+Floyd-Warshall is a dynamic programming algorithm used to find the shortest paths between all pairs of vertices in a weighted graph. It works by iteratively improving the path between two nodes via intermediate nodes.
+
+---
+
+# Question 10: How would you find the Strongly Connected Components (SCCs) in a graph?
+
+**Answer:**
+To find SCCs in a directed graph:
+1. **Kosaraju’s Algorithm:** Perform a DFS to order vertices by finish time, then reverse the graph and do DFS in that order.
+2. **Tarjan’s Algorithm:** Uses a single DFS traversal with low-link values to identify SCCs.
+
+---
