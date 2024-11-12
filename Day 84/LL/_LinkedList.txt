@@ -1,0 +1,62 @@
+"# Linked List: Linear Data Structure consisting of nodes connected via pointers."
+
+## **Definition**: 
+A linked list is a linear data structure in which elements (nodes) are not stored at contiguous memory locations. Each node contains two parts: data and a reference (or pointer) to the next node in the sequence.
+
+## **Basic Operations**:
+- **Insertion**: Adding a new node at the beginning, middle, or end of the list.
+- **Deletion**: Removing a node from the beginning, middle, or end of the list.
+- **Traversal**: Accessing each node in the list sequentially.
+- **Search**: Finding an element in the list by traversing through nodes.
+
+## **Applications**:
+- **Dynamic Memory Allocation**: Used where memory needs to be dynamically allocated and deallocated (e.g., heap memory management).
+- **Implementing Data Structures**: Used in stacks, queues, hash tables, and graphs.
+- **Undo Operations**: Used in software systems to implement undo/redo functionality.
+
+## **Types of Linked Lists**:
+- **Singly Linked List**: Each node points to the next node, and the last node points to `NULL`.
+- **Doubly Linked List**: Each node has pointers to both the previous and next nodes.
+- **Circular Linked List**: The last node points to the first node, forming a circle.
+- **Circular Doubly Linked List**: Each node points to the next and previous nodes, and the last node connects back to the first node.
+
+## **Implementation**:
+- **Node Structure**: A node contains two fields: data and a pointer to the next node (in singly linked lists), or pointers to both the next and previous nodes (in doubly linked lists).
+  
+C++ Example:
+  ```cpp
+  struct Node {
+      int data;
+      Node* next; // For singly linked list
+      Node* prev; // For doubly linked list
+  };
+  ```
+
+## **Complexity**:
+- **Insertion**: O(1) when inserting at the head, O(n) when inserting at the end or in the middle.
+- **Deletion**: O(1) for head deletion, O(n) for deletion in the middle or end.
+- **Search/Traversal**: O(n) for both, as you have to visit each node.
+
+## **Real-World Examples**:
+- **Music Playlist**: A doubly linked list can be used to move forward and backward in a playlist.
+- **Browser History**: Maintaining back and forward browsing history with a doubly linked list.
+- **LRU Cache**: Implementing a Least Recently Used cache, often using a combination of doubly linked list and a hash map.
+
+## **Advantages**:
+- **Dynamic Size**: Grows and shrinks in size as needed, unlike arrays which have a fixed size.
+- **Efficient Insertion/Deletion**: Inserting or deleting elements is efficient, especially at the head or tail of the list.
+- **No Wasted Memory**: Memory is allocated only when a new node is created.
+
+## **Disadvantages**:
+- **Memory Overhead**: Extra memory is required for storing pointers.
+- **Sequential Access**: Requires O(n) time to access elements as there is no direct index-based access like arrays.
+- **Complexity**: More complex to implement than arrays, and pointers require careful handling to avoid memory leaks.
+
+## **Common Interview Questions**:
+- Reverse a linked list.
+- Detect a loop in a linked list.
+- Merge two sorted linked lists.
+- Find the middle of a linked list.
+- Remove duplicates from a sorted linked list.
+- Implement a stack or queue using a linked list.
+- Find the intersection point of two linked lists.
