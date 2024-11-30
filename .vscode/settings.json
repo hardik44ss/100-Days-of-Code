@@ -10,7 +10,8 @@
     "regex": "cpp",
     "utility": "cpp",
     "valarray": "cpp",
-    "random": "cpp"
+    "random": "cpp",
+    "map": "cpp"
   },
   "pieces.cloudCapabilities": "Blended",
   "pieces.telemetry": true,
